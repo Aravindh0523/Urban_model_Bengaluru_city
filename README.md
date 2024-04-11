@@ -3,7 +3,7 @@
 The project shows the evolution of Bengaluru's urban areas over time. The approach involves the use of Google Earth Engine and includes image acquisition, classification and visualization.
 
 # Study Area:
-![CHEESE!](https://github.com/Revmi28/testing/assets/106192874/fea5472c-de53-4415-84f2-833af1069f0b)
+![ROI](https://github.com/Revmi28/Urban_model_Bengaluru_city/assets/106192874/48700fb0-ce02-4566-b61b-cc2be5ffb506)
 
 # METHODOLOGY:
 
