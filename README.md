@@ -1,6 +1,6 @@
 # INTRODUCTION:
           
-The project shows the evolution of Bengaluru's urban areas over time. The approach involves the use of Google Earth Engine and includes image acquisition, classification and visualization.
+The project shows the evolution of Bengaluru's urban areas over time. The approach involves the use of the Google Earth Engine and includes image acquisition, classification, and visualization.
 
 # Study Area:
 ![ROI](https://github.com/Revmi28/Urban_model_Bengaluru_city/assets/106192874/48700fb0-ce02-4566-b61b-cc2be5ffb506)
@@ -11,10 +11,10 @@ The project shows the evolution of Bengaluru's urban areas over time. The approa
       Load Optical image: Using an imported shape file of Bengaluru city, insert the optical image collection and filter by area.
       Landsat 5, Landsat 7, and Landsat 8 datasets were used to examine the study area's land use and land cover classification. Three decades were observed for LULC in the study period, which runs from 1990 to 
       2024: 1990, 1995, 2000, 2005, 2010, 2015, 2020, and 2024. The Tier-1, Level-2 Landsat 5 dataset was used between 1990 and 2000; the Tier-1, Level-2 Landsat 7 dataset was used between 2000 and 2010; and the 
-      Tier-1, Level-2 Landsat 8 dataset was used between 2015 and 2024. After adding the imagery and applying a filter to the desired area and time frame, create a composite.
+      Tier-1, Level-2 Landsat 8 dataset was used in 2015 and Landsat 9 dataset was used in 2024. After adding the imagery and applying a filter to the desired area and time frame, create a composite.
 
  Step 2:
-      create a function to take clouds out of the Landsat data: All that has to be done is mask away the information regarding cloud cover that is already contained in the Landsat data.
+      create a function to ensure high-quality data for analysis, cloud-free images were selected, and the median method in Google Earth Engine (GEE) was utilized to mitigate potential atmospheric and sensor-related variations in the composite image.
 
  Step 3:
       Create a test and training dataset, combine land cover classes, and define the bands and training points.
@@ -30,13 +30,13 @@ The project shows the evolution of Bengaluru's urban areas over time. The approa
      Here, land use is predicted using the Random Forest with 50 trees and 5 randomly selected predictors per split. The training data (80% of the data) is  used for prediction.
 
  Step 5:
-      We examine a confusion matrix in order to assess the effectiveness of our training. This matrix aids in determining whether the classifier is operating as intended and whether the training set of data is 
+      We examine a confusion matrix to assess the effectiveness of our training. This matrix aids in determining whether the classifier is operating as intended and whether the training set of data is 
       appropriate for instructing the classifier. From this matrix, we compute metrics such as training overall accuracy and kappa statistics to determine the accuracy of our model. Finally, we conducted a 
       thorough analysis of the fluctuations in the area occupied by each class throughout the three decades.
 
  step 6:
       We computed and then visualized a variety of spectral indices to visualize the expansion of urban areas. NDVI and NDBI  indices, which allow us to highlight particular elements like vegetation, water 
-      bodies,and urban infrastructure,  combinations of several bands using Landsat data from 1990 to 2024.
+      bodies, and urban infrastructure,  combinations of several bands using Landsat data from 1990 to 2024.
       
 
 
