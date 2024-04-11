@@ -1,4 +1,4 @@
-//var Ben_city : Table users/revanthkrv2000/Bengaluru_city';   
+// load Datasets   
 var l8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2');
 var image = l8.filterBounds(Ben_city)
             .filterDate('2015-01-01','2015-12-30')
@@ -48,8 +48,6 @@ var classified = image.select(bands).classify(classifier)
 Map.addLayer(classified , {min:0 , max:3 , palette:['blue','green','red','yellow']})
 
 // Accuracy: Kappa, producers, consumers and overall accuracy
-
-//var confusion_matrix = ee.ConfusionMatrix(testSet.classify(classifier).errorMatrix(actual, predicted, order))
 
 var confusionMatrix = classifier.confusionMatrix();
 print('Confusion matrix: ', confusionMatrix);
@@ -120,7 +118,7 @@ for (var i = 0; i < 4; i++) {
   legend.add(makeRow(palette[i], names[i]));
   }  
 
-// //Add legend to map
+//Add legend to map
 Map.add(legend);
 
 
