@@ -139,14 +139,15 @@ var urbanPalette =
 //Add final map to the display
 Map.addLayer(classified.sldStyle(urbanPalette), {}, "Land Classification");
 
+
+//Export Image
 Export.image.toDrive({
   image: classified.sldStyle(urbanPalette),
-  description: 'imageToCOGeoTifffinal_1',
+  description: 'LULC_Map',
+  scale: 30,
   region: Ben_city,
-  fileFormat: 'GeoTIFF',
-  formatOptions: {
-    cloudOptimized: true
-  }
+  maxPixels: 1e13,
+  crs: 'EPSG:4326'
 });
 
 
