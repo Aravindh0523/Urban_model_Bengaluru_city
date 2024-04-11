@@ -1,5 +1,5 @@
 // Load your Land Use and Land Cover (LULC) images.
-var lulc_1990 = ee.Image('users/revanthkrv2000/LULC_1991');
+var lulc_1991 = ee.Image('users/revanthkrv2000/LULC_1991');
 var lulc_1995 = ee.Image('users/revanthkrv2000/LULC_1995');
 var lulc_2000 = ee.Image('users/revanthkrv2000/LULC_2000');
 var lulc_2005 = ee.Image('users/revanthkrv2000/LULC_2005');
@@ -18,7 +18,7 @@ var visParams = {
   // Create a dictionary of LULC images.
   
   var images = {
-  'LULC 1990': lulc_1990.visualize(visParams),
+  'LULC 1991': lulc_1991.visualize(visParams),
   'LULC 1995': lulc_1995.visualize(visParams),
   'LULC 2000': lulc_2000.visualize(visParams),
   'LULC 2005': lulc_2005.visualize(visParams),
