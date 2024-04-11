@@ -1,12 +1,12 @@
 // Load your Land Use and Land Cover (LULC) images.
-var lulcMap1 = ee.Image('users/revanthkrv2000/LULC_1991');
-var lulcMap2 = ee.Image('users/revanthkrv2000/LULC_1995');
-var lulcMap3 = ee.Image('users/revanthkrv2000/LULC_2000');
-var lulcMap4 = ee.Image('users/revanthkrv2000/LULC_2005');
-var lulcMap5 = ee.Image('users/revanthkrv2000/LULC_2010');
-var lulcMap6 = ee.Image('users/revanthkrv2000/LULC_2015');
-var lulcMap7 = ee.Image('users/revanthkrv2000/LULC_2020');
-var lulcMap8 = ee.Image('users/revanthkrv2000/LULC_2024');
+var lulc_1990 = ee.Image('users/revanthkrv2000/LULC_1991');
+var lulc_1995 = ee.Image('users/revanthkrv2000/LULC_1995');
+var lulc_2000 = ee.Image('users/revanthkrv2000/LULC_2000');
+var lulc_2005 = ee.Image('users/revanthkrv2000/LULC_2005');
+var lulc_2010 = ee.Image('users/revanthkrv2000/LULC_2010');
+var lulc_2015 = ee.Image('users/revanthkrv2000/LULC_2015');
+var lulc_2020 = ee.Image('users/revanthkrv2000/LULC_2020');
+var lulc_2024 = ee.Image('users/revanthkrv2000/LULC_2024');
 
 // Define visualization parameters for the LULC maps.
 var visParams = {
@@ -18,15 +18,15 @@ var visParams = {
   // Create a dictionary of LULC images.
   
   var images = {
-    'LULC Map 1': lulcMap1.visualize(visParams),
-    'LULC Map 2': lulcMap2.visualize(visParams),
-    'LULC Map 3': lulcMap3.visualize(visParams),
-    'LULC Map 4': lulcMap4.visualize(visParams),
-    'LULC Map 5': lulcMap5.visualize(visParams),
-    'LULC Map 6': lulcMap6.visualize(visParams),
-    'LULC Map 7': lulcMap7.visualize(visParams),
-    'LULC Map 8': lulcMap8.visualize(visParams),
-  };
+  'LULC 1990': lulc_1990.visualize(visParams),
+  'LULC 1995': lulc_1995.visualize(visParams),
+  'LULC 2000': lulc_2000.visualize(visParams),
+  'LULC 2005': lulc_2005.visualize(visParams),
+  'LULC 2010': lulc_2010.visualize(visParams),
+  'LULC 2015': lulc_2015.visualize(visParams),
+  'LULC 2020': lulc_2020.visualize(visParams),
+  'LULC 2024': lulc_2024.visualize(visParams),
+};
   
   /*
    * Set up the maps and control widgets
