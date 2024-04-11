@@ -1,4 +1,4 @@
-var Ben_city = Table('users/revanthkrv2000/Bengaluru_city');
+//var Ben_city : Table users/revanthkrv2000/Bengaluru_city';   
 var l8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2');
 var image = l8.filterBounds(Ben_city)
             .filterDate('2015-01-01','2015-12-30')
