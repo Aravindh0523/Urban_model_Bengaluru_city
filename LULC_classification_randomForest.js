@@ -169,7 +169,7 @@ var areas = areaImage1.reduceRegion({
  
 print(areas)
 
-  
+// Bar graph
 var clsImg = ee.Image(areaImage).addBands(classified)
 print(clsImg)
 var area_chart = ui.Chart.image.byClass({
